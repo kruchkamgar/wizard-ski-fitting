@@ -1,31 +1,79 @@
-.App {
+.wizard,
+.labelResult
+{
+  padding: 2rem 3rem;
+}
+.labelResult {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+}
+.header > * {
+  padding: 0 1rem 0 0;
+  margin: 1.25rem 0;
+}
+input {
+  margin: 0.25rem 0.5rem;
+  box-sizing: border-box;
+  width: 10rem;
+}
+.form {
+  height: 9rem;
+}
+.navigation {
+  padding: 1rem 0;
+}
+button {
+  margin-right: 0.5rem;
+}
+hr {
+  width: 15rem;
+  margin-left: 0;
 }
 
+.advisement {
+  font-size: 0.75rem;
+  color: #d55;
+  padding-left: 0.5rem;
+  align-items: baseline;
+}
+
+
+input:valid {
+  border-width: 1px;
+}
+input:invalid {
+  background-color: #FFF2F2;
+  border-style: solid;
+  border-width: 1px 4px 1px 1px;
+  border-color: pink;
+  border-color: #CC7700 #FCC #FCC #CC7700;
+  border-style: solid;
+}
+input:required:placeholder-shown {
+  background-color: #FFFBF2;
+  border-width: 1px 4px 1px 1px;
+  border-color: #FFCC44 #FFCC44 #eee #eee;
+}
+input::placeholder {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+input,
+input:placeholder-shown {
+  border-width: 1px;
+  /* border-style: outset; */
+  border-style: solid;
+  border-color: #ddd;
+  padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
