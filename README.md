@@ -6,7 +6,7 @@ Project uses a generic template and a config file to separate data from views (D
 
 The progress circle comes from Material UI, and displays progress by percentage of [required (html validations)] fields actually completed (as opposed to page transitions).
 
-To make a change to data entered, navigate back -- app saves your work automatically.
+To make a change to data entered, navigate back -- app saves your input content automatically.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
