@@ -1,9 +1,14 @@
+:root {
+  --border-gray: #ddd;
+  --default-spacing: 0.5rem;
+}
+
 .wizard,
-.labelResult
+.ticket
 {
   padding: 2rem 3rem;
 }
-.labelResult {
+.ticket {
   text-align: center;
 }
 
@@ -14,11 +19,7 @@
   padding: 0 1rem 0 0;
   margin: 1.25rem 0;
 }
-input {
-  margin: 0.25rem 0.5rem;
-  box-sizing: border-box;
-  width: 10rem;
-}
+
 .form {
   height: 9rem;
 }
@@ -26,7 +27,7 @@ input {
   padding: 1rem 0;
 }
 button {
-  margin-right: 0.5rem;
+  margin-right: var(--default-spacing);
 }
 hr {
   width: 15rem;
@@ -36,11 +37,26 @@ hr {
 .advisement {
   font-size: 0.75rem;
   color: #d55;
-  padding-left: 0.5rem;
+  padding-left: var(--default-spacing);
   align-items: baseline;
 }
 
+select,
+input {
+  margin: 0.25rem var(--default-spacing);
+  box-sizing: border-box;
+  width: 10rem;
+}
+select {
+  margin-right: 2rem;
+  padding: 0.2rem 0.1rem;
+  border-color: var(--border-gray);
+}
+input {
+  padding: 0.2rem 0.2rem 0.2rem var(--default-spacing);
+}
 
+/* handle borders */
 input:valid {
   border-width: 1px;
 }
@@ -62,13 +78,11 @@ input::placeholder {
   font-size: 0.75rem;
   color: #aaa;
 }
-input,
-input:placeholder-shown {
+input {
   border-width: 1px;
   /* border-style: outset; */
   border-style: solid;
-  border-color: #ddd;
-  padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+  border-color: var(--border-gray);
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
