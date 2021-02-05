@@ -21,19 +21,22 @@ const GenericForm = ({wizardData, config}) => {
       },
       ...props } }
 
-  const makeOptions = (options) => {
-      return [(<option key={"select"}>(select)</option>)]
-        .concat(
-          Object.entries(options)
-          .map( option => {
-            const name = option[0], code = option[1]
-            return <option key={name}>{name}</option> }))
+  const makeOptions = (select) => {
+    return [(<option key={"select"}>(select)</option>)]
+      .concat(
+        Object.entries(select.options)
+        .map( option => {
+          const name = option[0], code = option[1]
+          return <option key={name}>{name}</option> }))
   }
   const makeSelect = (select) => {
+    const value = config.contextKey ?
+      wizardData[config.contextKey][select.name] : wizardData[select.name];
     return <Select key={select.name}
         name={select.name}
+        defaultValue={value}
         attributes={makeAttributes(select.attributes)}>
-        {makeOptions(select.options)}</Select>
+        {makeOptions(select)}</Select>
   }
 
   const makeInput = (input) => {
