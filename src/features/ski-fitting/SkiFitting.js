@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const SkiFitting = () => {
 
-  const headerConfig = {skiFitting: 'Ski Fitting Questionnaire', ticket: 'Ski Fitting'}
+  const headerConfig = {skiFitting: 'Ski Fitting Questionnaire', ticket: 'Ski Fitting Ticket'}
   const data = { customer:{} }
   const onComplete = () => {
     setDisplay(<SkiOrderTicket header={headerConfig.ticket} data={data}/>)
