@@ -4,7 +4,7 @@
 
 Project uses a generic template and a config file to separate data from views (DRY)
 
-The progress circle comes from Material UI, and displays progress by percentage of [required] fields actually completed (as opposed to page transitions).
+The progress circle comes from Material UI, and displays progress by percentage of [required (html validations)] fields actually completed (as opposed to page transitions).
 
 To make a change to data entered, navigate back -- app saves your work automatically.
 
